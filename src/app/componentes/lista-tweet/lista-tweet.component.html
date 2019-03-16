@@ -1,0 +1,21 @@
+<div *ngFor="let tweet of misTweets">
+    <app-detalle-tweet [mySelectedTweet]="tweet"></app-detalle-tweet>
+</div>
+<br>
+<div>
+    <mat-card>
+        <mat-form-field class="full-width">
+            <input matInput placeholder="Autor" [(ngModel)]="autorR">
+        </mat-form-field>
+        <mat-form-field class="full-width">
+            <input matInput type="number"  placeholder="ID" [(ngModel)]="idR">
+        </mat-form-field> 
+        <p>
+            <mat-form-field class="full-width">
+                <textarea matInput placeholder="Tweet" [(ngModel)]="textoR">
+                    </textarea>
+            </mat-form-field>
+        </p>
+        <button mat-button (click)="addNewTweet()">Ingresar</button>
+    </mat-card>
+</div>
